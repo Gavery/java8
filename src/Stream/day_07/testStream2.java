@@ -45,10 +45,10 @@ public class testStream2 {
 		List<String> list=Arrays.asList("aaa","bbb","ccc","eee");
 		
 	}
-	public static Stream<Character> filterCharacter(String str){
-		List<Character> list=new ArrayList<>();
-		for(Character ch:str.toCharArray()){
-			list.add(ch);
-		}
-	}
+//	public static Stream<Character> filterCharacter(String str){
+//		List<Character> list=new ArrayList<>();
+//		for(Character ch:str.toCharArray()){
+//			list.add(ch);
+//		}
+//	}
 }
