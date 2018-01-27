@@ -43,12 +43,26 @@ public class testStream2 {
 	@Test
 	public void test1(){
 		List<String> list=Arrays.asList("aaa","bbb","ccc","eee");
+		/*
+		 * map本身会得到一个流，filterCharacter函数也返回一个流，所有事流中嵌套一个流
 		
+		Stream<Stream<Character>> stream=list.stream()
+							.map(testStream2::filterCharacter);
+		stream.forEach((sm)->{
+			sm.forEach(System.out::println);
+		});
+		 */
+		
+		System.out.println("----------------");
+		Stream<Character> stream=list.stream()
+			.flatMap(testStream2::filterCharacter);
+		stream.forEach(System.out::println);
 	}
-//	public static Stream<Character> filterCharacter(String str){
-//		List<Character> list=new ArrayList<>();
-//		for(Character ch:str.toCharArray()){
-//			list.add(ch);
-//		}
-//	}
+	public static Stream<Character> filterCharacter(String str){
+		List<Character> list=new ArrayList<>();
+		for(Character ch:str.toCharArray()){
+			list.add(ch);
+		}
+		return list.stream();
+	}
 }

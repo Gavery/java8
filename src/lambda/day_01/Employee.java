@@ -3,7 +3,13 @@ package lambda.day_01;
 public class Employee {
  public String name;
  public int age;
- public double salary;
+public int getAge() {
+	return age;
+}
+public void setAge(int age) {
+	this.age = age;
+}
+public double salary;
 public Employee() {
 	super();
 }
@@ -23,12 +29,6 @@ public String getName() {
 }
 public void setName(String name) {
 	this.name = name;
-}
-public int getAge() {
-	return age;
-}
-public void setAge(int age) {
-	this.age = age;
 }
 public double getSalary() {
 	return salary;
