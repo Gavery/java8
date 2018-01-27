@@ -12,7 +12,7 @@ import lambda.day_01.Employee;
  * @author gaojiayin
  *
  */
-public class testStream {
+public class TestStream {
 	List<Employee> emps = Arrays.asList(
 			new Employee("王五", 16, 231.11), 
 			new Employee("赵六", 25, 555.11),
