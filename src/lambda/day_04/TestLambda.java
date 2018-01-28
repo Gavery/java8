@@ -17,7 +17,7 @@ import org.junit.Test;
  * 
  * Consumer<T>:消费型接口（没有返回值，只是对参数进行操作）
  *    void accept(T t);
- * Supplier<T>:供给型接口
+ * Supplier<T>:供给型接口(产生对象)
  *     T get();
  * Function<T,R>:函数型接口
  * 		R apply(T t);
