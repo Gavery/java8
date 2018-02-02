@@ -19,12 +19,24 @@ public class testStream2 {
 			new Employee("李四", 32, 222.11),
 			new Employee("王五", 37, 231.11), 
 			new Employee("赵六", 16, 555.11));
+	List<Integer> list=Arrays.asList(13,35,40,50);
 	/*
 	 * 映射：
 	 * map--接受lambda，将元素转换成其他形式或提取信息。接受一个函数作为参数，该
 	 * 函数会被应用到每个元素上，并将其映射成一个新的元素。
 	 * flatMap--接受一个函数作为参数，将流中的没个值都换成另一个流，然后把所有流连接成一个流
 	 */
+	@Test
+	public void test4(){
+		emps.stream()
+			.forEach((e)->{
+				list.stream()
+					.forEach((o)->{
+						if(e.getAge()>o){
+						}
+					});
+			});
+	}
 	@Test
 	public void test(){
 		List<String> list=Arrays.asList("aaa","bbb","ccc","eee");
