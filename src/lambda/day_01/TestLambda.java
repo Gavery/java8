@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import lambda.day_01.I.FilterEmployee;
-import lambda.day_01.I.filterEmpByAge;
 
 public class TestLambda {
 
