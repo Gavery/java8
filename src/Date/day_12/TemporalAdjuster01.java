@@ -38,12 +38,13 @@ public class TemporalAdjuster01 {
 		
 		System.out.println("----------------------");
 		//自定义时间格式(时间转换为字符串)
-		DateTimeFormatter dtf2=DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH:mm:ss");
+		DateTimeFormatter dtf2=DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		String strDate2=dtf2.format(ldt);
 		System.out.println(strDate2);
 		//字符串转换为时间格式
-		LocalDateTime newDate=ldt.parse(strDate2,dtf2);
-		System.out.println(newDate);
+		DateTimeFormatter dtf3=DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		LocalDateTime newDate=LocalDateTime.parse("2017-10-15 12:22:58",dtf3);
+		System.out.println(newDate+"--");
 	}
 //TemporalAdjuster01:时间矫正器
 	@Test

@@ -81,5 +81,9 @@ public class TestLocalDateTime {
 		System.out.println(ldt.getHour());
 		System.out.println(ldt.getMinute());
 		System.out.println(ldt.getSecond());
+		//获取当前时间的秒数
+		System.out.println(LocalDateTime.now().toEpochSecond(ZoneOffset.of("+8")));
+		//获取当前时间的毫秒数
+		System.out.println(LocalDateTime.now().toInstant(ZoneOffset.of("+8")).toEpochMilli());
 	}
 }
